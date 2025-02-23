@@ -1,0 +1,38 @@
+<!-- dialog_add_recipe_favorite.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/appbackground"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/recipeNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:hint="Recipe name"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:background="@drawable/rounded_edittext"
+        android:backgroundTint="#70FFFFFF"/>
+
+    <EditText
+        android:id="@+id/recipeLinkEditText"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@drawable/rounded_edittext"
+        android:backgroundTint="#70FFFFFF"
+        android:hint="Link from the Internet"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#3F51B5"
+        android:text="Add a favorite recipe" />
+</LinearLayout>

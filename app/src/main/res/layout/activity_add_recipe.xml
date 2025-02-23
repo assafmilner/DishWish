@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".activities.AddRecipeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/appbackground">
+
+        <!-- Title Text -->
+
+        <!-- Recipe Name -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="199dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="16dp"
+            android:text="Add new recipe"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_recipe_name"
+            android:layout_width="377dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Recipe name"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            android:background="@drawable/rounded_edittext"
+
+            android:backgroundTint="#70FFFFFF"/>
+
+        <!-- Cooking Time and Calories (side by side) -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_recipe_name">
+
+            <!-- Cooking Time -->
+
+            <!-- Calories -->
+
+            <EditText
+                android:id="@+id/et_cooking_time"
+                android:layout_width="182dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_edittext"
+                android:backgroundTint="#70FFFFFF"
+                android:hint="Cooking time"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_calories"
+                android:layout_width="189dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/rounded_edittext"
+                android:backgroundTint="#70FFFFFF"
+                android:hint="Calories"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+
+                app:layout_constraintStart_toEndOf="@+id/et_cooking_time"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Category (AutoComplete) -->
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout5"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+            android:background="@drawable/rounded_edittext"
+
+            android:backgroundTint="#70FFFFFF">
+
+            <AutoCompleteTextView
+                android:id="@+id/et_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Category"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:inputType="none"
+                android:padding="16dp"
+                android:drawableRight="@android:drawable/arrow_down_float"
+                android:focusable="true"
+                android:clickable="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Camera Image -->
+
+        <!-- Add Recipe Button -->
+
+        <EditText
+            android:id="@+id/et_description"
+            android:layout_width="372dp"
+            android:layout_height="219dp"
+            android:layout_marginTop="48dp"
+            android:ellipsize="none"
+            android:gravity="start|top"
+            android:hint="Add the list of ingredients and preparation method"
+            android:inputType="textMultiLine"
+            android:lineSpacingExtra="8dp"
+            android:minLines="8"
+            android:overScrollMode="always"
+            android:scrollbars="vertical"
+            android:scrollHorizontally="false"
+            android:singleLine="false"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
+            android:background="@drawable/rounded_edittext"
+
+            android:backgroundTint="#70FFFFFF"/>
+
+        <ImageView
+            android:id="@+id/img_recipe"
+            android:layout_width="277dp"
+            android:layout_height="128dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="88dp"
+            android:layout_marginEnd="16dp"
+            android:src="@android:drawable/ic_menu_camera"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_description"
+            android:background="@drawable/rounded_edittext"
+
+            android:backgroundTint="#70FFFFFF"/>
+
+        <Button
+            android:id="@+id/btn_add_recipe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#3F51B5"
+            android:text="Add recipe"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_recipe" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
