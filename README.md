@@ -24,6 +24,7 @@ Welcome to *DishWish*, an intuitive Android application that allows you to organ
 ![image](https://github.com/user-attachments/assets/4a01b62f-4219-41c7-9f0c-9a4c818bc943)
 
 4️⃣ *Add a Recipe* – Users can add new recipes to their saved collection by entering relevant details.
+
 ![image](https://github.com/user-attachments/assets/abb04d3f-9703-46ac-bef7-fe3cdecf7e7d)
 
 
